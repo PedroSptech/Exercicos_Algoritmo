@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<div id = "id_ex1">
+<body>
+    <input type="number" id="id_idade" placeholder="Insira a sua idade">
+    <button onclick="Cal_apo_hom()">Aposentadoria Homem</button>
+    <button onclick="Cal_apo_mul()">Aposentadoria Mulher</button>
+
+    <script>
+        function Cal_apo_hom(){
+            media = 70 - id_idade.value 
+            if(id_idade.value >= 70){
+                alert("Você já pode se aposentar,  PARABÉNS !!!")
+            }else{
+                alert("Você ainda não pode se aposentar, você tem, "+ id_idade.value +" anos, e é necessário 70 anos ou mais, ainda faltam "+ media + " anos" )
+            }
+        }
+
+        function Cal_apo_mul(){
+            media = 60 - id_idade.value 
+            if(id_idade.value >= 60){
+                alert("Você já pode se aposentar, PARABÉNS !!!")
+            }else{
+                alert("Você ainda não pode se aposentar, você tem, "+ id_idade.value +" anos, e é necessário 60 anos ou mais, ainda faltam "+ media + " anos" )
+            }
+        }
+    </script>
+    </div>
+    <br>
+    <div id="id_ex2">
+        <input type="number" id="id_valor_pizza" placeholder="Insira o valor da pizza">
+        <input type="number" id="id_amigos" placeholder="Insira o número de amigos">
+
+        <button onclick="Calc_pizza()">#lovePizza</button>
+
+        <script>
+            function Calc_pizza(){
+                valor = id_valor_pizza.value/ id_amigos.value 
+                alert("Cada um dos "+ id_amigos.value + " amigos vai pagar R$"+ valor )
+            }
+        </script>
+    </div>
+    <br>
+    // step = Vc pode usar um valor decimal colocando o tipo no type number(só deixa iserir valores que são multiplos)
+    <div id="id_ex3">
+        <input type="number" id="id_valor_pass" step="0.01" placeholder="Insira o valor da passagem">
+        <input type="number" id="id_num_via" placeholder="Insira o número de viagens que você faz ">
+
+        <button onclick="ver_econ()">Ver economia</button>
+ 
+        <script>
+            parseFloat(id_valor_pass)
+            function ver_econ(){
+            let econ = (id_valor_pass.value * id_num_via.value)
+            alert("Você economizará R$" + econ +  " por mês")
+        }
+        </script>
+    </div>
+</body>
+</html>
