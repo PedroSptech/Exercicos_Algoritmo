@@ -1,3 +1,4 @@
+<!--PEDRO LUDOVIC NASCIMENTO LIMA-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -46,7 +47,7 @@
         </script>
     </div>
     <br>
-    // step = Vc pode usar um valor decimal colocando o tipo no type number(só deixa iserir valores que são multiplos)
+    <!-- step = Vc pode usar um valor decimal colocando o tipo no type number(só deixa iserir valores que são multiplos)-->
     <div id="id_ex3">
         <input type="number" id="id_valor_pass" step="0.01" placeholder="Insira o valor da passagem">
         <input type="number" id="id_num_via" placeholder="Insira o número de viagens que você faz ">
@@ -59,6 +60,84 @@
             let econ = (id_valor_pass.value * id_num_via.value)
             alert("Você economizará R$" + econ +  " por mês")
         }
+        </script>
+    </div>
+    <br>
+    <div id="id_ex4">
+        <input type="text" id="id_nomesa" placeholder="Insira o seu nome">
+        <input type="number" id="id_ki" placeholder="Insira seu KI base">
+
+        <button onclick="ver_ki()">Ver ki em cada forma</button>
+
+        <script>
+            function ver_ki(){
+            ki_saj = id_ki.value * 50;
+            ki_saj1 = id_ki.value * 100;
+
+            alert("O ki de "+ id_nomesa.value +"na forma Super Sayajin é "+ ki_saj)
+            alert("O ki de "+ id_nomesa.value +"na forma Super Sayajin 2 é "+ ki_saj1)
+
+        }
+        </script>
+    </div>
+    <br>
+    <div id="id_ex5">
+        <input type="text" id="id_nome_pi" placeholder= "Insira seu nome">
+        <input type="number" id="id_cont" step = "0.01" placeholder="Insira a nota da avaliação continuada">
+        <input type="number" id="id_pi" step = "0.01" placeholder="Insira a nota de Pesquisa e inovação">
+
+        <button onclick="Cal_Med()"> Ver média </button>
+
+        <script>
+        function Cal_Med(){
+           let media = ((id_cont.value * 0.4) + (id_pi.value * 0.6))/2
+            alert("A média de " + id_nome_pi.value + " será de " + media)
+        }
+        </script>
+    </div>
+    <br>
+    <div id="id_ex6">
+        <input type="number" id="id_n1" placeholder="Insira o primeiro número">
+        <input type="number" id="id_n2" placeholder="Insira o segundo  número">
+
+        <button onclick="soma()">SOMA</button>
+        <button onclick="subtracao()">SUBTRAÇÃO</button>
+        <button onclick="multiplicacao()">MULTIPLICAÇÃO</button>
+        <button onclick="divisao()">DIVISÃO</button>
+
+        <script>
+            function soma(){
+                let n1 = Number(id_n1.value)
+                let n2 = Number(id_n2.value)
+
+                soma = n1 + n2
+
+                 alert("A soma entre "+ n1 + " e " + n2 + " é " + soma)
+            }
+            function subtracao(){
+                n1 = id_n1.value
+                n2 = id_n2.value
+
+                subtracao = n1 - n2
+
+                 alert("A subtração entre "+ n1 + " e " + n2 + " é " + subtracao)
+            }
+            function multiplicacao(){
+                n1 = id_n1.value
+                n2 = id_n2.value
+
+                multiplicacao = n1 * n2
+
+                alert("A multiplicação entre "+ n1 + " e " + n2 + " é " + multiplicacao)
+            }
+            function divisao(){
+                n1 = id_n1.value
+                n2 = id_n2.value
+
+                divisao = n1 / n2
+
+                alert("A divisão entre "+ n1 + " e " + n2 + " é " + divisao)
+            }
         </script>
     </div>
 </body>
